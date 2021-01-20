@@ -4,10 +4,25 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>SeleniumProxyAuth</AssemblyName>
     <RootNamespace>SeleniumProxyAuth</RootNamespace>
+    <Authors>Erol444</Authors>
+    <Company>Erol444</Company>
+    <Description>Selenium proxy authentication library for .NET</Description>
+    <RepositoryUrl>https://github.com/Erol444/SeleniumProxyAuth</RepositoryUrl>
+    <PackageIcon>selenium_logo_square_green.png</PackageIcon>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Titanium.Web.Proxy" Version="3.1.1344" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\Desktop\selenium_logo_square_green.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
