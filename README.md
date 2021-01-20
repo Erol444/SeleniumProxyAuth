@@ -9,7 +9,7 @@ The workaround is to create a **local proxy server** (this simple library uses [
 ### Instructions
 1. **Create the local proxy server**
 ```csharp
-var proxyServer = new SeleniumProxyAuth();
+var proxyServer = new SeleniumProxyServer();
 ```
 2. **Add a new endpoint**
 ```csharp
@@ -24,7 +24,7 @@ options.AddArgument($"--proxy-server=127.0.0.1:{localPort}");
 public void Test()
 {  
     // Create a local proxy server
-    var proxyServer = new SeleniumProxyAuth();
+    var proxyServer = new SeleniumProxyServer();
 
     // Don't await, have multiple drivers at once using the local proxy server
     TestSeleniumProxyServer(proxyServer, new ProxyAuth("123.123.123.123", 80, "prox-username1", "proxy-password1"));
@@ -34,7 +34,7 @@ public void Test()
     while (true) { }
 }
 
-private async Task TestSeleniumProxyServer(SeleniumProxyAuth proxyServer, ProxyAuth auth)
+private async Task TestSeleniumProxyServer(SeleniumProxyServer proxyServer, ProxyAuth auth)
 {
     // Add a new local proxy server endpoint
     var localPort = proxyServer.AddEndpoint(auth);

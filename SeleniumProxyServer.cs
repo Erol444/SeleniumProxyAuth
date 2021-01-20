@@ -11,12 +11,12 @@ using Titanium.Web.Proxy.Models;
 
 namespace SeleniumProxyAuth
 {
-    public class SeleniumProxyAuth : IDisposable
+    public class SeleniumProxyServer : IDisposable
     {
         private Dictionary<int, ProxyAuth> proxyAuths;
         private ProxyServer proxyServer;
 
-        public SeleniumProxyAuth()
+        public SeleniumProxyServer()
         {
             proxyAuths = new Dictionary<int, ProxyAuth>();
             proxyServer = new ProxyServer();
